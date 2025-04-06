@@ -170,9 +170,6 @@ RUN addgroup -g 1000 node \
     && node --version \
     && npm --version
 
-# Copy build vars.
-ARG HANDBRAKE_VERSION
-
 # Copy helpers.
 COPY scripts/* /usr/local/bin/
 
@@ -225,8 +222,5 @@ COPY --from=curl /usr/local/ /usr/local/
 COPY --from=ffmpeg /ffmpeg /usr/local/bin/
 COPY --from=ffmpeg /ffprobe /usr/local/bin/
 
-# Set internal environment variables.
-RUN \
-    set-cont-env HANDBRAKE_VERSION "$HANDBRAKE_VERSION" && \
-    true
+
 
