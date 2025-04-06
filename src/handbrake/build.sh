@@ -489,6 +489,7 @@ log "Configuring HandBrake..."
         --enable-fdk-aac \
         --enable-x265 \
         --enable-libdovi \
+        --disable-gtk \
         $CONF_FLAGS \
 )
 
