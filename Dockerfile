@@ -75,7 +75,7 @@ RUN xx-verify /tmp/cpu_features-install/bin/list_cpu_features
 # https://github.com/wader/static-ffmpeg
 ###############################################################################
 
-FROM --platform=$BUILDPLATFORM mwader/static-ffmpeg:7.1.1 AS ffmpeg
+FROM --platform=$BUILDPLATFORM jasperchan/ffmpeg-static:latest AS ffmpeg
 
 
 # CURL (https://github.com/lwthiker/curl-impersonate)
